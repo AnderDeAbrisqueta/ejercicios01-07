@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ejercicio 02</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ng-container *ngIf="nombre; else elseTemplate">
+    <ion-button (click)="lipiarPantall()" expand="full">
+      LIMPIA PANTALLA
+    </ion-button>
+    <h2>{{ nombre }}</h2>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <ion-button (click)="mostrarNombre()" expand="full">
+      MUESTRA NOMBRE
+    </ion-button>
+    <h2 class="ion-text-center">{{ nombre }}</h2>
+  </ng-template>
+</ion-content>
