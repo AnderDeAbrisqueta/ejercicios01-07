@@ -1,9 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>ejercicio07</ion-title>
+    <ion-title>Ejercicio 07</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label  position="stacked">Pesetas</ion-label>
+    <ion-input clearInput [(ngModel)]="pesetas" (keyup)="conversorPesetasEuros()"></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label  position="stacked">€</ion-label>
+    <ion-input clearInput [(ngModel)]="euros" (keyup)="conversorEurosPesetas()"></ion-input>
+  </ion-item>
+  
+  
 </ion-content>

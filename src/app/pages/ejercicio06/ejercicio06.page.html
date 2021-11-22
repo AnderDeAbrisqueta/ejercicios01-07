@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>ejercicio06</ion-title>
+    <ion-title>Ejercicio 06</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-grid>
+    <ion-row *ngFor="let filas of tablero; index as i">
+      <ion-col *ngFor="let movimiento of filas">
+        <ion-icon (click)=catMovement() *ngIf="movimiento === 1" name="logo-octocat" size="large"></ion-icon>
+        <ion-icon *ngIf="movimiento === 2" name="exit-outline" size="large"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h1><strong>{{ mensaje }}</strong></h1>
 </ion-content>
